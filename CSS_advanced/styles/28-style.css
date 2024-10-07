@@ -573,7 +573,7 @@
   }
 
   .header-logo {
-    padding: var(--header-padding);
+    position: var(--header-logo-position);
   }
 
   .header-logo a {
