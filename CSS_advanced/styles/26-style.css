@@ -462,7 +462,7 @@
 
   .card-testimonial .card-quote cite {
     display: block;
-    padding: 2rem;
+    padding-top: 1rem;
     color: var(--color-primary);
   }
   
