@@ -554,7 +554,7 @@
     padding: 0.5rem 1rem;
   }
 
-  .nav .nav-link:hover .nav-link::before {
+  .nav .nav-item .nav-link {
     background-color: var(--color-primary);
     width: 100%;
   }
