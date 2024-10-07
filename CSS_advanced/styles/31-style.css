@@ -472,6 +472,10 @@
     padding-top: 1rem;
     color: var(--color-primary);
   }
+
+  .card-testimonial .card-quote {
+    position: relative;
+  }
   
   .card-testmonial .card-quote::before {
     content: \201C;
