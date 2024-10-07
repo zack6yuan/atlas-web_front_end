@@ -477,7 +477,7 @@
     position: relative;
   }
   
-  .card-testmonial .card-quote::before {
+  .card-testimonial .card-quote::before {
     content: \201C;
     position: absolute;
     top: -4.5rem;
