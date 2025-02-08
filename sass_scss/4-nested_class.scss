@@ -1,0 +1,9 @@
+/* assigns color to elements */
+$grey: #3D3D3D;
+$red: #FF0000;
+body {
+  color: $grey;
+  body .red {
+    color: $red;
+  }
+}
