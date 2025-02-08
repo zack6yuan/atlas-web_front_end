@@ -1,12 +1,8 @@
 /* Method: assign text color to HTML tags */
+$color: #3D3D3D;
 body {
-  .container {
-    color: #3D3D3D;
-  }
+  color: $color;
 }
-
 p {
-  .container {
-    color: #3D3D3D;
-  };
+  color: $color;
 }
