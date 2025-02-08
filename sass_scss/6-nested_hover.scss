@@ -1,0 +1,9 @@
+/* assigns hover properties of elements */
+$red: #FF0000;
+$green: #00FF00;
+button {
+  color: $red;
+  :hover {
+    color: $green;
+  }
+}
