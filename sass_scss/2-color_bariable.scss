@@ -1,0 +1,9 @@
+/* assigns color to elements */
+$color1: #3D3D3D;
+$color2: #6D6D6D;
+body, p {
+  color: $color1;
+}
+body, h2 {
+  background-color: $color2;
+}
