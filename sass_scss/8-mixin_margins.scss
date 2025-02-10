@@ -1,13 +1,12 @@
-/* Method: assign margins */
-$ten: 10px;
-$fifteen: 15px;
-
-@mixin body-margins {
-  margin-left: $ten;
-  margin-right: $ten;
+/* Method: assign margins with mixins */
+@mixin margins($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+body {
+  @include margins(10px, 10px);
 }
 
-@mixin div-margins {
-  margin-left: $fifteen;
-  margin-right: $fifteen;
+div {
+  @include margins(15px, 15px);
 }
