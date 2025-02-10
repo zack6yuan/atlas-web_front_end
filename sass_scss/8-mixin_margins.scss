@@ -1,0 +1,11 @@
+/* Method: assign margins */
+$ten: 10px;
+$fifteen: 15px;
+body {
+  margin-left: $ten;
+  margin-right: $ten;
+}
+div {
+  margin-left: $fifteen;
+  margin-right: $fifteen;
+}
