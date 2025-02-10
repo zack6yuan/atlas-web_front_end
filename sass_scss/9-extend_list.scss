@@ -1,0 +1,16 @@
+/* Method: set font size and text color of elements */
+$twelve: 12px;
+$green: #00FF00;
+$red: #FF0000;
+
+.info {
+  font-size: $twelve;
+}
+
+.info.success {
+  color: $green;
+}
+
+.info.warning {
+  color: $red;
+}
