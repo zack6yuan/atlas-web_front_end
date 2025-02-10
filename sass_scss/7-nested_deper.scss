@@ -1,0 +1,13 @@
+/* modifies font size of elements */
+$twelve: 12px;
+$fourteen: 14px;
+$sixteen: 16px;
+body {
+  font-size: $fourteen;
+  h1 {
+    font-size: $sixteen;
+    h1.smaller {
+      font-size: 12px;
+    }
+  }
+}
