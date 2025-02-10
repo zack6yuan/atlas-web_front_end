@@ -1,5 +1,5 @@
 /* Method: create class for each name in the list */
-@import 'list-names';
+@import '11-photos';
 @each $name in $list-names {
   .photo-julien {
     background: image-url("photos/julien.jpg") no-repeat; }
