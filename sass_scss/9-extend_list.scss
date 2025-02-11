@@ -7,10 +7,12 @@ $red: #FF0000;
   font-size: $twelve;
 }
 
-.info.success {
+.success {
+  @extend .info;
   color: $green;
 }
 
-.info.warning {
+.warning {
+  @extend .info;
   color: $red;
 }
