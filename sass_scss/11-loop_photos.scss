@@ -2,11 +2,15 @@
 @import '11-photos';
 @each $name in $list-names {
   .photo-julien {
-    background: image-url("photos/julien.jpg") no-repeat; }
+    background-image: url("/photos/julien.jpg");
+  }
   .photo-john {
-    background: image-url("photos/john.jpg") no-repeat; }
+    background-image: url("/photos/john.jpg");
+  }
   .photo-sam {
-    background: image-url("photos/sam.jpg") no-repeat; }
+    background-image: url("/photos/sam.jpg");
+  }
   .photo-damian {
-    background: image-url("photos/damian.jpg") no-repeat; }
+    background-image: url("/photos/damian.jpg");
+  }
 }
