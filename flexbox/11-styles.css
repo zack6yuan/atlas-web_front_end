@@ -490,7 +490,8 @@
     transition-property: color, background-color;
   }
   
-  /* Card TESTIMONIAL ============================= */
+  /* Card TESTIMONIAL
+      ============================= */
   
   .card-testimonial {
     text-align: center;
@@ -523,7 +524,6 @@
   }
 
   /*** ARTICLE PAGE ***/
-
   /* Section HERO (article) ============================= */
 
   .hero-article {
@@ -532,7 +532,7 @@
   }
 
   .hero-article::before {
-    content: empty;
+    content: "";
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
