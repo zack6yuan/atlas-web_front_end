@@ -1,5 +1,5 @@
 /* Method: create class for each name in the list */
-@import '11-photos';
+@import '11-photos.scss';
 
 @each $name in $list-names {
   .photo-julien {
