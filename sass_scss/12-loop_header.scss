@@ -1,3 +1,6 @@
-/* Method: Create H* tags */
-$one: 1px;
-$two: 2px;
+/* Method: Create H* tags according to header level */
+@for $h from 1 through 5 {
+  .header-#{$h} {
+    font-size: $h * 1;
+  }
+}
