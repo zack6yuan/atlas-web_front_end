@@ -5,4 +5,4 @@
 ### Usage of Containers
 ### Usage of the Grid system
 ### Usage of Components
-### Usage og Utilities
+### Usage of Utilities
