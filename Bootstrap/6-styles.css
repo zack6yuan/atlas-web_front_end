@@ -1,0 +1,29 @@
+.btn-primary {
+  background-color: #E0003C;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #BC1340;
+}
+
+.btn-outline-primary {
+  border-color: #E0003C;
+}
+
+a {
+  color: #E0003C;
+}
+
+.text-muted {
+  color: #8C8C8C;
+}
+
+.card-header {
+  background-color: #E0003C;
+}
+
+.card-header h4 {
+  color: white;
+}
