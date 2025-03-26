@@ -9,26 +9,26 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
-        <header class="border-bottom p-2 mb-4 bg-light">
-            <ul>
+        <header class="border-bottom p-2 mb-3 bg-light">
+            <ul class="row mb-0 list-unstyled">
                 <li>
-                    <a href="/">
+                    <a href="/" class="col btn btn-dark">
                         <img src="https://via.placeholder.com/150x50" />
                     </a>
                 </li>
-                <li>
-                    <a href="#">Chemical elements</a>
+                <li class="">
+                    <a href="#" class="col btn btn-dark active">Chemical elements</a>
                 </li>
-                <li>
-                    <a href="#">Profile</a>
+                <li class="">
+                    <a href="#" class="col justify btn btn-dark">Profile</a>
                 </li>
             </ul>
         </header>
 
         <main class="container-fluid">
             <section>
-                <div role="alert" class="alert alert-info">
-                    <h4>List of chemical elements</h4>
+                <div class="container-fluid alert alert-info">
+                    <h4 class="alert">List of chemical elements</h4>
                     <p>This is a list of the 5 first chemical elements which have been identified as of 2019.</p>
                     <hr>
                     <p class="mb-0">A popular visualization of all 118 elements is <a href="https://en.wikipedia.org/wiki/Periodic_table">the periodic table of the elements</a>.</p>
@@ -36,7 +36,7 @@
             </section>
 
             <section>
-                <h1 class="mb-4 mt-5">Chemical elements <span class="badge badge-pill bg-info text-white">only 5</span></h1>
+                <h1 class="mb-4 mt-5">Chemical elements <span class="badge rounded-pill bg-info text-white">only 5</span></h1>
 
                 <div>
                     <table class="table table-dark table-hover">
@@ -118,7 +118,7 @@
                                 <td>1.57</td>
                                 <td>2.8</td>
                             </tr>
-                            <tr class="badge badge-info">
+                            <tr layout="badge badge-info">
                                 <td>5</td>
                                 <td>B</td>
                                 <td>Boron</td>
