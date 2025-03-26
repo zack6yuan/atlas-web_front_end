@@ -1,15 +1,18 @@
 .btn-primary {
+  border-color: #E0003C;
   background-color: #E0003C;
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
+  border-color: #E0003C;
   background-color: #BC1340;
 }
 
 .btn-outline-primary {
   border-color: #E0003C;
+  color: #E0003C;
 }
 
 a {
