@@ -10,12 +10,29 @@
   background-color: #BC1340;
 }
 
+.btn:hover {
+  background-color: #E0003C;
+  border-color: #E0003C;
+}
+
+.btn-lg {
+  border-color: #E0003C !important;
+}
+
+.btn-lg:hover,
+.btn-lg:focus,
+.btn-lg:active {
+  background-color: #BC1340;
+}
+
 .btn-outline-primary {
   border-color: #E0003C;
   color: #E0003C;
 }
 
-a {
+a,
+a:hover,
+a:focus {
   color: #E0003C;
 }
 
@@ -23,8 +40,15 @@ a {
   color: #8C8C8C;
 }
 
+.card {
+  border-color: #E0003C;
+  border-radius: 1rem;
+}
+
 .card-header {
   background-color: #E0003C;
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
 }
 
 .card-header h4 {
