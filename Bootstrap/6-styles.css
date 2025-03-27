@@ -7,7 +7,7 @@
 .btn-primary:focus,
 .btn-primary:active {
   border-color: #E0003C;
-  background-color: #BC1340;
+  background-color: #BC1340 !important;
 }
 
 .btn:hover {
@@ -20,9 +20,9 @@
 }
 
 .btn-lg:hover,
-.btn-lg:focus,
+.btn-lg:focus
 .btn-lg:active {
-  background-color: #BC1340;
+  background-color: #BC1340 !important;
 }
 
 .btn-outline-primary {
