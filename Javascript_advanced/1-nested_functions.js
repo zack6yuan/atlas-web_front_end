@@ -1,15 +1,15 @@
-let globalVariable = "Welcome"
+const globalVariable = "Welcome";
 function outer() {
-  alert(globalVariable)
-  let course = "Holberton"
+  alert(globalVariable);
+  const course = "Holberton";
   function inner() {
-    alert(globalVariable + course)
-    let exclamation = "!"
+    alert(`${globalVariable} ${course}`);
+    const exclamation = "!";
     function inception() {
-      alert(globalVariable + course + exclamation)
+      alert(`${globalVariable} ${course} ${exclamation}`);
     }
-    inception()
+    inception();
   }
-  inner()
-  outer()
+  inner();
 }
+outer();
