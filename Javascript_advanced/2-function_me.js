@@ -4,6 +4,6 @@ function welcomeMessage(fullName) {
   }
 }
 
-function guillaume() {
-  alert(setUp("Guillaume"));
-};
+const guillaume = welcomeMessage("Guillaume");
+const alex = welcomeMessage("Alex");
+const fred = welcomeMessage("Fred");
