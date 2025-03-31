@@ -1,27 +1,16 @@
 function divideBy(firstNumber) {
-  return function (secondNumber) {
-    return(secondNumber / firstNumber)
+  return function(secondNumber) {
+    return(secondNumber / firstNumber);
   }
 }
 
 function addBy(firstNumber) {
   return function(secondNumber) {
-    let sum
+    return firstNumber + secondNumber;
   }
 }
 
-function addBy100() {
-  return addBy(100);
-}
-
-function addBy1000() {
-  return addBy(1000);
-}
-
-function divideBy10() {
-  return divideBy(10);
-}
-
-function divideBy100() {
-  return divideBy(100);
-}
+const addBy100 = addBy(100);
+const addBy1000 = addBy(1000);
+const divideBy10 = divideBy(10);
+const divideBy100 = divideBy(100);
