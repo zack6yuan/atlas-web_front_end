@@ -1,4 +1,5 @@
 console.log('Start of the execution queue');
+// delay of 0
 setTimeout(() => {
   console.log('Final code block to be executed');
 }, 0);
