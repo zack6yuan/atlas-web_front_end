@@ -10,9 +10,43 @@
         <script type="application/javascript">
           $(document).ready(function () {
             function createFamilyTree() {
-              const table = ('<table><th><tr>Firstname</tr><tr>Lastname</tr></th></table>');
+              /* Creating new table using string literal
+              Parameters:
+              thead - table head
+              th - table head (cell)
+              tr - table row
+              tbody - table body
+              td - table data
+              */
+              const newTable = `
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Guillaume</td>
+                      <td>Salva</td>
+                    </tr>
+                    <tr>
+                      <td>Paulette</td>
+                      <td>Salva</td>
+                    </tr>
+                    <tr>
+                      <td>Antoine</td>
+                      <td>Salva</td>
+                    </tr>
+                  </tbody>
+                </table>
+              `;
+              /* Append the new table to the body */
+              $("body").append(newTable);
             }
-          })
+            createFamilyTree();
+          });
         </script>
     </head>
     <body>
