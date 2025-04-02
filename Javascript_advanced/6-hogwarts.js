@@ -1,14 +1,14 @@
 class studentHogwarts {
-  #privateScore = 0;
-  #name = null;
+  privateScore = 0;
+  name = null;
 
-  /* Private Method */
+  /* Private Method - only called within the class */
   #changeScoreBy(points) {
-    this.#privateScore += points;
+    this.privateScore += points;
   }
 
   setName(newName) {
-    this.#name = newName; 
+    this.name = newName; 
   }
 
   rewardStudent() {
@@ -20,7 +20,7 @@ class studentHogwarts {
   }
 
   getScore() {
-    return (`${this.#name}: ${this.#privateScore}`);
+    return (`${this.name}: ${this.privateScore}`);
   }
 }
 
