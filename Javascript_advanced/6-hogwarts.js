@@ -24,6 +24,7 @@ class studentHogwarts {
   }
 }
 
+/* Creating "harry", instance of studentHogwarts */
 const harry = new studentHogwarts();
 harry.setName("Harry");
 harry.rewardStudent();
@@ -33,6 +34,7 @@ harry.rewardStudent();
 /* Use the getScore method */
 console.log(harry.getScore());
 
+/* Creating "draco", instance of studentHogwarts */
 const draco = new studentHogwarts();
 draco.setName("Draco");
 draco.rewardStudent();
