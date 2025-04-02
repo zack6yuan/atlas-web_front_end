@@ -1,5 +1,5 @@
 function countPrimeNumbers() {
-  for (let x = 0; x < 101; x++) {
-    if (x )
+  for (let x = 2; x < 101; x++) {
+    
   }
 }
