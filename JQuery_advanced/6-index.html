@@ -2,59 +2,61 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Task 5</title>
+    <title>Task 6</title>
     <script
       src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
       integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
       crossorigin="anonymous"
     ></script>
     <script type="application/javascript">
-      $(document).ready(function () {
-        function createFamilyTree() {
-          const newTable = `
-          <table>
+      function createFamilyTree() {
+        const table = `
+        <table>
           <thead>
-            <th>Firstname</th>
-            <th>Lastname</th>
+            <tr>
+              <th>Firstname</th>
+             <th>Lastname</th>
+            </tr>
           </thead>
           <tbody>
-          </tbody>
+            <tr>
+              <td>Guillaume</td>
+              <td>Salva</td>
+              <td>(x)</td>
+            </tr>
+            <style>
+              td:last-child {
+              background-color: orange;
+              }
+            </style>
+            <tr>
+              <td>Arielle</td>
+              <td>Snizt</td>
+              <td>(x)</td>
+            </tr>
+            <tr>
+              <td>Fanette</td>
+              <td>Snizt</td>
+              <td>(x)</td>
+            </tr>
+            <tr>
+              <td>Gerard</td>
+              <td>Snizt</td>
+              <td>(x)</td>
+            </tr>
+            <tr>
+              <td>Victor</td>
+              <td>Salva</td>
+              <td>(x)</td>
+            </tr>
         </table>
-        `;
-        $("body").append(newTable);
-        }
-      })
-      function addNewMember(firstName, lastName, position) {
-        const newRows = `
-        <tr>
-          <td>${firstName}</td>
-          <td>${lastName}</td>
-          <td>(x)</td>
-        <tr>
-        `;
-        $("tbody").append(newRows);
-
-        if (position === 'before') {
-          const tableInfo = `
-          const input1 = $("<input>");
-          newTable.append(input1);
-          const input2 = $("<input>");
-          newTable.append(input2);
-          const submitButton = $("<button>");
-          submitButton.text("Submit");
-          newTable.append(button);
-          <tr>
-            <td>Firstname</td>
-            <td>Lastname</td>
-          </tr>
-          `;
-          tbody.append(tableInfo);
-        } else {
-          tfoot.append(tableInfo)
-        }
+      `;
+        $("body").append(table);
       }
-      </script>
-    </head>
-  <body>
-  </body>
+      $(document).ready(function () {
+        createFamilyTree();
+      });
+    </script>
+  </head>
+  <body></body>
 </html>
