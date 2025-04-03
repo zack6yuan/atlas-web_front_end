@@ -14,6 +14,8 @@
 * All your files should end with a new line
 
 A README.md file, at the root of the folder of the project, is mandatory
+
+# Tasks
 ## 1. Setup your dev environment - I learned how to make sure that jQuery loads and is ready to be used.
 ## 2. Creating a DOM element - I learned how to add a paragraph element and display it on the page using jQuery.
 ## 3. Creating multiple DOM elements at once - I learned how to create a table and assign proper values per location.
