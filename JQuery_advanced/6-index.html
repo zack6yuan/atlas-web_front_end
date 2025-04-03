@@ -2,55 +2,42 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Task 7</title>
-    <script>
+    <title>Task 5</title>
+    <script
       src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
       integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
       crossorigin="anonymous"
-    </script>
+    ></script>
     <script type="application/javascript">
       $(document).ready(function () {
-        function createFamilyTree() {
-          $("body").append(
-          $("<table>").append(
-            $("<thead>").append(
-              $("th").text("Firstname"),
-              $("th").text("Lastname")
-            ),
-          $("<table>").append(
-            $("<tbody>")
-          )
-          )
-        )
-        }
-      });
-      function addNewMember(firstName, lastName, position) {
-        ("body").append(
-          ("<tr>").append(
-            ("td").append(`${firstName}`)
-            ("td").append(`${lastName}`)
-            ("td").append("(x)").css("background-color", "orange").click(function() {
-              ("<tr>").remove();
-            })
-          )
-        )
-        if (position === 'before') {
-          ("thead").append(<tr></tr>)
-        } else {
-          ("tbody").append(<tb></tb>)
-        }
+        function createFamilyTree {
+          const newTable = `
+            <table>
+              <thead>
+                <th>Firstname</th>
+            <th>Lastname</th>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        `;
+        $("body").append(newTable);
+      })
+      function addNewMember(firstName, lastName) {
+        const newRows = `
+        <tr>
+          <td>${firstName}</td>
+          <td>${lastName}</td>
+          <td>(x)</td>
+        <tr>
+        `;
+        $("tbody").append(newRows);
       }
-      createFamilyTree();
       addNewMember("Guillaume", "Salva");
       addNewMember("Arielle", "Snizt");
       addNewMember("Fanette", "Snizt");
       addNewMember("Gerard", "Snizt");
       addNewMember("Victor", "Salva");
-
-      function createForm() {
-        document.createElement('<input>', type="text")
-        
-      }
     </script>
   </head>
   <body></body>
