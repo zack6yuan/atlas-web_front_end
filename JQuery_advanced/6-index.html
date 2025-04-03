@@ -10,11 +10,11 @@
     ></script>
     <script type="application/javascript">
       $(document).ready(function () {
-        function createFamilyTree {
+        function createFamilyTree() {
           const newTable = `
-            <table>
-              <thead>
-                <th>Firstname</th>
+          <table>
+          <thead>
+            <th>Firstname</th>
             <th>Lastname</th>
           </thead>
           <tbody>
@@ -22,8 +22,9 @@
         </table>
         `;
         $("body").append(newTable);
+        }
       })
-      function addNewMember(firstName, lastName) {
+      function addNewMember(firstName, lastName, position) {
         const newRows = `
         <tr>
           <td>${firstName}</td>
@@ -32,13 +33,26 @@
         <tr>
         `;
         $("tbody").append(newRows);
+
+        if (position === 'before') {
+          const tableInfo = `
+          const input1 = $("<input>");
+          newTable.append(input1);
+          const input2 = $("<input>");
+          newTable.append(input2);
+          const submitButton = $("<button>");
+          submitButton.text("Submit");
+          newTable.append(button);
+          <tr>
+            <td>Firstname</td>
+            <td>Lastname</td>
+          </tr>
+          `;
+          tbody.append(tableInfo);
+        } else {
+          tfoot.append(tableInfo)
+        }
       }
-      addNewMember("Guillaume", "Salva");
-      addNewMember("Arielle", "Snizt");
-      addNewMember("Fanette", "Snizt");
-      addNewMember("Gerard", "Snizt");
-      addNewMember("Victor", "Salva");
-    </script>
   </head>
   <body></body>
 </html>
