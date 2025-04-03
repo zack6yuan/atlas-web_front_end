@@ -10,36 +10,43 @@
         <script type="application/javascript">
           $(document).ready(function () {
             function createFamilyTree() {
-              ("body").append(
-                ("<table>").append(
-                  ("<thead>").append(
-                    ("<tr>").append(
-                      ("<th>").text("Firstname")
-                      ("<th>").text("Lastname")
+              $("body").append(
+                $("<table>").append(
+                  $("<thead>").append(
+                    $("<tr>").append(
+                      $("<th>").text("Firstname"),
+                      $("<th>").text("Lastname")
                     )
                   ),
-                  $("<tbody>")
+                  $("<tbody>").append(
+                    $("<tr>").append(
+                      $("<td>").text("Guillaume"),
+                      $("<td>").text("Salva")
+                    ),
+                    $("<tr>").append(
+                      $("<td>").text("Paulette"),
+                      $("<td>").text("Salva")
+                    ),
+                    $("<tr>").append(
+                      $("<td>").text("Antione"),
+                      $("<td>").text("Salva")
+                    )
+                  )
                 )
               )
             }
+            function replaceFamilyTree() {
+              const replaceTable = `
+              <tr>
+                <td>Gerard</td>
+                <td>Bonissa</td>
+              </tr>
+              `;
+              $("tbody").html(replaceTable);
+            }
+            createFamilyTree();
+            replaceFamilyTree();
           });
-          function addNewMember(firstName, lastName) {
-            ("body").append(
-              ("<table>").append(
-                ("<tr>").append(
-                  ("<td>"),
-                  ("<td>"),
-                  ("<td>").text("(x)"),
-                )
-              )
-            )
-          }
-          createFamilyTree();
-          addNewMember("Guillaume", "Salva");
-          addNewMember("Arielle", "Snizt");
-          addNewMember("Fanette", "Snizt");
-          addNewMember("Gerard", "Snizt");
-          addNewMember("Victor", "Salva");
         </script>
     </head>
     <body>
