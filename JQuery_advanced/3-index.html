@@ -10,33 +10,30 @@
         <script type="application/javascript">
           $(document).ready(function () {
             function createFamilyTree() {
-              /* Creating new table using string literal
-              Parameters:
-              thead - table head
-              th - table head (cell)
-              tr - table row
-              tbody - table body
-              td - table data
-              */
-              const newTable = `
-                const table = $("<table>");
-                const thead = $("<thead>");
-                const tr = $("<tr>");
-                const th = $("Firstname");
-                const th = $("Lastname");
-                const tbody = $("<tbody>");
-                const tr = $("<tr>");
-                const td = $("Guillaume");
-                const td = $("Salva");
-                const tr = $("<tr>");
-                const td = $("Paulette");
-                const td = $("Salva");
-                const tr = $("<tr>");
-                const td = $("Antione");
-                const td = $("Salva");
-              `;
-              /* Append the new table to the body */
-              $("body").append(newTable);
+              $("body").append(
+                $("<table>").append(
+                  $("<thead>").append(
+                    $("<tr>").append(
+                      $("<th>").text("Firstname"),
+                      $("<th>").text("Lastname")
+                    )
+                  ),
+                  $("<tbody>").append(
+                    $("<tr>").append(
+                      $("<td>").text("Guillaume"),
+                      $("<td>").text("Salva")
+                    ),
+                    $("<tr>").append(
+                      $("<td>").text("Paulette"),
+                      $("<td>").text("Salva")
+                    ),
+                    $("<tr>").append(
+                      $("<td>").text("Antione"),
+                      $("<td>").text("Salva")
+                    )
+                  )
+                )
+              )
             }
             createFamilyTree();
           });
