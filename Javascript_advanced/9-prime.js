@@ -1,6 +1,8 @@
 function countPrimeNumbers() {
   let result = [];
-  for (let x = 2; x < 101; x++) {
-    if ()
+  for (let num = 0; num < 101; num++) {
+    if (num % num == 0 && num % 1 == 0) {
+      result.append
+    }
   }
 }
