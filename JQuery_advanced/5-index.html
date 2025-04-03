@@ -1,47 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Task 0</title>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-      crossorigin="anonymous"
-    ></script>
-    <script type="application/javascript">
-      $(document).ready(function () {
-        function createFamilyTree() {
-          $("body").append(
-          $("<table>").append(
-            $("<thead>").append(
-              $("th").text("Firstname"),
-              $("th").text("Lastname")
-            ),
-          $("<table>").append(
-            $("<tbody>")
-          )
-          )
-        )
-        }
-      });
-      function addNewMember(firstName, lastName) {
-        ("body").append(
-          ("<tr>").append(
-            ("td").append(`${firstName}`)
-            ("td").append(`${lastName}`)
-            ("td").append("(x)").css("background-color", "orange").click(function() {
-              ("<tr>").remove();
-            })
-          )
-        )
-      }
-      createFamilyTree();
-      addNewMember("Guillaume", "Salva");
-      addNewMember("Arielle", "Snizt");
-      addNewMember("Fanette", "Snizt");
-      addNewMember("Gerard", "Snizt");
-      addNewMember("Victor", "Salva");
-    </script>
-  </head>
-  <body></body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 0</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+        crossorigin="anonymous">
+        </script>
+        <script type="application/javascript">
+          $(document).ready(function () {
+            function createFamilyTree() {
+              /* Creating new table using string literal
+              Parameters:
+              thead - table head
+              th - table head (cell)
+              tr - table row
+              tbody - table body
+              td - table data
+              */
+              const newTable = `
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Guillaume</td>
+                      <td>Salva</td>
+                      <td>(x)</td>
+                      $("td").on('click')
+                    </tr>
+                    <tr>
+                      <td>Arielle</td>
+                      <td>Snizt</td>
+                      <td>(x)</td>
+                    </tr>
+                    <tr>
+                      <td>Fanette</td>
+                      <td>Snizt</td>
+                      <td>(x)</td>
+                    </tr>
+                    <tr>
+                      <td>Gerard</td>
+                      <td>Snizt</td>
+                      <td>(x)</td>
+                    </tr>
+                    <tr>
+                      <td>Victor</td>
+                      <td>Salva</td>
+                      <td>(x)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              `;
+              /* Append the new table to the body */
+              $("body").append(newTable);
+            }
+            createFamilyTree();
+          });
+        </script>
+    </head>
+    <body>
+    </body>
 </html>
