@@ -11,41 +11,28 @@
           $(document).ready(function () {
             function createFamilyTree() {
               $("body").append(
-                $("<table>").append(
-                  $("<thead>").append(
-                    $("<tr>").append(
-                      $("<th>").text("Firstname"),
-                      $("<th>").text("Lastname")
-                    )
-                  ),
-                  $("<tbody>").append(
-                    $("<tr>").append(
-                      $("<td>").text("Guillaume"),
-                      $("<td>").text("Salva")
-                    ),
-                    $("<tr>").append(
-                      $("<td>").text("Paulette"),
-                      $("<td>").text("Salva")
-                    ),
-                    $("<tr>").append(
-                      $("<td>").text("Antione"),
-                      $("<td>").text("Salva")
-                    )
-                  )
+               $("<table>").append(
+                $("<thead>").append(
+                  $("<th>").text("Firstname"),
+                  $("<th>").text("Lastname")
+                ),
+                $("<tbody>")
+               ) 
+              )
+            };
+            function addNewMember(firstName, lastName) {
+              $("body").append(
+                $("<tr>").append(
+                  $("<td>").text(firstName),
+                  $("<td>").text(lastName)
+                  $("<td>").text("(x)"),
                 )
               )
-            }
-            function replaceFamilyTree() {
-              const replaceTable = `
-              <tr>
-                <td>Gerard</td>
-                <td>Bonissa</td>
-              </tr>
-              `;
-              $("tbody").html(replaceTable);
-            }
+            };
             createFamilyTree();
-            replaceFamilyTree();
+            addNewMember("Guillaume", "Salva");
+            addNewMember("test", "hello");
+            addNewMember("skibidi", "fortnite");
           });
         </script>
     </head>
