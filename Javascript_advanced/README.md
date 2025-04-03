@@ -24,7 +24,7 @@
 ## 3. Closure - I learned how to implement closures in JavaScript.
 ## 4. I used a loop to populate an array and return the seat number of a student.
 ## 5. Complex closure - I used functions to implement calculation functionality.
-## Changing DOM with closure - I learned how to change the visual display of a page with buttons.
+## 6. Changing DOM with closure - I learned how to change the visual display of a page with buttons.
 ## 7. I learned how to modify values, (reward (+) and penalize (-)).
 ## 8. Stack order and setTimeout - I used a loop to count the number of iterations, and logged it.
 ## 9. Stack order in functions - I called function / value pairs.
