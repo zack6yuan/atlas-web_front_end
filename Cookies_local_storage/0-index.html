@@ -7,14 +7,19 @@
 </head>
 <body>
   <h1>Login to the website</h1>
-  <input type="text" placeholder="Firstname">
-  <input type="text" placeholder="Email">
-  <button>Log me in</button>
+  <input type="text" placeholder="Firstname" id="firstName">
+  <input type="text" placeholder="Email" id="email">
+  <button onclick="setCookies()">Log me in</button>
   <h1>Cookies</h1>
-  <button>Show the cookies</button>
+  <button onclick="showCookies()">Show the cookies</button>
   <script>
-    function setCookies() {
-      document.cookie("firstname"="firstname")
+    function setCookies(name, value) {
+      const newCookie = document.cookie(`${name}=${value}`);
+    };
+    function showCookies() {
+      const paragraph = document.createElement("p");
+      paragraph.innerHTML = `Cookies: ${newCookie}`;
+      document.body.appendChild(paragraph);
     }
   </script>
 </body>
