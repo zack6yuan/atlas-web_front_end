@@ -20,37 +20,34 @@
           )
         );
       }
-      function addNewMember(firstName, lastName) {
+      function addNewMember(firstName, lastName, position) {
         const addedRow = $("<tr>").append(
           $("<td>").text(firstName),
           $("<td>").text(lastName),
-          $("<td>").text("(x)").css("background-color", "orange").click(function() {
-            addedRow.remove();
-          })
         );
-        if (position == before) {
-          $("table").prepend(newRow)
-        } else {
-          $("table").append(newRow)
-        }
         $("tbody").append(addedRow);
-      }
-      function createForm() {
-        const newRow = $("<tr>").append(
-          $("<input>").attr("type", "text"),
-          $("<input>").attr("type", "text"),
-          $("<select>").text("Before", "After"),
-          $("<input>").attr("type", "submit").click(function() {
-            addNewMember()
-          })
+        if (position === 'before') {
+          $("table").prepend(addedRow)
+        } else {
+          $("table").append(addedRow)
+        }
+        const newTable = $("<tr>").append(
+          $("<tr>").append(
+            $("<input>"),
+            $("<input>"),
+            $("<select>").append(
+              $("<option>").attr("value", "before").text("Before"),
+              $("<option>").attr("value", "after").text("After"),
+            ),
+            $("<button>").text("Submit").click(function () {
+              addNewMember();
+            })
+          )
         )
+        $("body").prepend(newTable)
       }
       createFamilyTree();
-      addNewMember("Guillaume", "Salva");
-      addNewMember("Arielle", "Snizt");
-      addNewMember("Fanette", "Snizt");
-      addNewMember("Gerard", "Snizt");
-      addNewMember("Victor", "Salva");
+      addNewMember();
     });
   </script>
 </head>

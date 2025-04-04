@@ -2,29 +2,52 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Task 6</title>
+    <title>Task 7</title>
     <script
       src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
       integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
       crossorigin="anonymous"
     ></script>
     <script type="application/javascript">
-      function createSearchForm() {
-        ("body").append(
-          $("<input>").attr("type", "text"),
-          $("<input>").attr("type", "submit").click(function () {
-            // function logic goes here
-          })
-        )
-        $("<ul>")
-      }
-      function addNewArticle(id, title, snippet) {
-        $("<li>").append(
-          $("<p>").text(`${id} - ${title}`), // working on it
-          $("<p>").text(snippet)
-        )
-        $("<ul>").append("<li>")
-      }
+      $(document).ready(function () {
+        function createSearchForm() {
+          $("body").append(
+            $("<tr>").append(
+              $("<input>").attr("type", "text"),
+              $("<input>")
+                .attr("type", "submit")
+                .click(function () {
+                  queryWikipedia();
+                })
+            )
+          );
+        }
+        function addNewArticle(id, title, snippet) {
+          $("body").append(
+            $("<table>").append(
+              $("<tr>").append(
+                $("<td>").append(
+                  $("<li>").append(
+                    $("<span>").text(/*id*/ "Example ID -"),
+                  )
+                ),
+                $("<td>").append(
+                  $("<b>").text(/* title */ "Example Result")
+                )
+              ),
+              $("<tr>").append(
+                fetch(`https://www.mediawiki.org/wiki/API:Search`)
+                .then(function(response) {return response.json();})
+                .then(function(response) {
+                  response
+                })
+              )
+            )
+          );
+        }
+        createSearchForm();
+        addNewArticle();
+      });
     </script>
   </head>
   <body></body>

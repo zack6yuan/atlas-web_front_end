@@ -1,60 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <title>Task 0</title>
-        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-        crossorigin="anonymous">
-        </script>
-        <script type="application/javascript">
-          $(document).ready(function () {
-            function createFamilyTree() {
-              /* Creating new table using string literal
-              Parameters:
-              thead - table head
-              th - table head (cell)
-              tr - table row
-              tbody - table body
-              td - table data
-              */
-              const newTable = `
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Firstname</th>
-                      <th>Lastname</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Guillaume</td>
-                      <td>Salva</td>
-                    </tr>
-                    <tr>
-                      <td>Paulette</td>
-                      <td>Salva</td>
-                    </tr>
-                    <tr>
-                      <td>Antoine</td>
-                      <td>Salva</td>
-                    </tr>
-                  </tbody>
-                </table>
-              `;
-              /* Append the new table to the body */
-              $("body").append(newTable);
-            }
-            function addPostRow(data) {
-              const paragraph = $("<p>")
-              const span = $("<span>")
-              $("span").text(`Post created with id ${id}, title: ${title}, author: ${author}`)
-              $("body").append(paragraph);
-            }
-            createFamilyTree();
-          });
-        </script>
-    </head>
-    <body>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 11</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function addPostRow(data) {
+        $("body").append(
+          $("<p>").append(
+            $("<span>").text(`Post created with the id ${id}, title: ${tltle}, author: ${author}`)
+          )
+        )
+      }
+      function listPosts() {
+        $.get("db.json"), function(response) {
+          console.log(response)
+        }
+      }
+      addPostRow();
+      listPosts();
+    </script>
+  </head>
+  <body></body>
 </html>
