@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Login to the website</h1>
-  <input type="text" placeholder="Firstname" id="firstName">
-  <input type="text" placeholder="Email" id="email">
-  <button onclick="setCookies()">Log me in</button>
-  <h1>Cookies</h1>
-  <button onclick="showCookies()">Show the cookies</button>
-  <script>
-    function setCookies() {
-      /* Method: Retrieve firstName and email + set cookies */
-      const firstName = document.getElementById('firstName').value;
-      const email = document.getElementById('email').value;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Login to the website</h1>
+    <input type="text" placeholder="Firstname" id="firstName" />
+    <input type="text" placeholder="Email" id="email" />
+    <button onclick="setCookies()">Log me in</button>
+    <h1>Cookies</h1>
+    <button onclick="showCookies()">Show the cookies</button>
+    <script>
+      function setCookies() {
+        /* Method: Retrieve firstName and email + set cookies */
+        const firstName = document.getElementById("firstName").value;
+        const email = document.getElementById("email").value;
 
-      /* Setting cookies for firstName and email
-      Note: Multiple cookies can be set at once,
-      and retrieved with one call */
-      document.cookie = `firstname=${firstName}`;
-      document.cookie = `email=${email}`;
-    }
-    function showCookies() {
-      /* Method: add new paragraph and append to body with cookies */
-      const paragraph = document.createElement("p");
-      paragraph.innerHTML = `Cookies: ${document.cookie}`;
-      document.body.appendChild(paragraph);
-    }
-  </script>
-</body>
+        /* Setting cookies for firstName and email
+        Note: Multiple cookies can be set at once,
+        and retrieved with one call */
+        document.cookie = `firstname=${firstName}`;
+        document.cookie = `email=${email}`;
+      }
+      function showCookies() {
+        /* Method: add new paragraph and append to body with cookies */
+        const paragraph = document.createElement("p");
+        paragraph.innerHTML = `Cookies: ${document.cookie}`;
+        document.body.appendChild(paragraph);
+      }
+    </script>
+  </body>
 </html>
