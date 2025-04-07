@@ -23,12 +23,16 @@
         document.cookie = `firstname=${firstName}; expires=Wed, 16 Apr 2025 12:00:00 UTC`;
         document.cookie = `email=${email}; expires=Wed, 16 Apr 2025 12:00:00 UTC`;
       }
-      
+
       function showCookies() {
         /* Method: add new paragraph and append to body with cookies */
         const paragraph = document.createElement("p");
         paragraph.innerHTML = `Cookies: ${document.cookie}`;
         document.body.appendChild(paragraph);
+      }
+
+      function getCookie(name) {
+        
       }
     </script>
   </body>
