@@ -31,8 +31,16 @@
         document.body.appendChild(paragraph);
       }
 
-      function getCookie(name) {
-        
+      function getCookie(name) { /*NEEDS REVIEWED */
+        const cookieCheck = document.cookie.split(";");
+        for (let x = 0; x < cookieCheck.length; x++) {
+          let trimmedCookie = cookieCheck.trim();
+          if (trimmedCookie[0] == name) {
+            return (trimmedCookie);
+          } else {
+            return "";
+          }
+        }
       }
     </script>
   </body>
