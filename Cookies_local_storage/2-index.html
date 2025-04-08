@@ -20,14 +20,14 @@
 
         /* Setting cookies for firstName and email with 10 day expiration date
         Note: Multiple cookies can be set at once, and retrieved with one call */
-        document.cookie = `firstname=${firstName}; expires=Wed, 16 Apr 2025 12:00:00 UTC`;
         document.cookie = `email=${email}; expires=Wed, 16 Apr 2025 12:00:00 UTC`;
+        document.cookie = `firstname=${firstName}; expires=Wed, 16 Apr 2025 12:00:00 UTC`;
       }
 
       function showCookies() {
         /* Method: add new paragraph and append to body with cookies */
         const paragraph = document.createElement("p");
-        paragraph.innerHTML = `Cookies: ${document.cookie}`;
+        paragraph.innerHTML = `Email: ${getCookie("email")} - Firstname: ${getCookie("name")}`;
         document.body.appendChild(paragraph);
       }
 
