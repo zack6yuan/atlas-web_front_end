@@ -17,13 +17,13 @@
         /* Method: Retrieve firstName and email + set cookies */
         const getFirstName = document.getElementById("firstname").value;
         const getEmail = document.getElementById("email").value;
-
         /* Setting cookies for firstName and email with expiration
         Note: Multiple cookies can be set at once,
         and retrieved with one call */
         document.cookie = `firstname=${getFirstName}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
         document.cookie = `email=${getEmail}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
       }
+
       function showCookies() {
         /* Method: add new paragraph and append to body with cookies */
         const paragraph = document.createElement("p");
@@ -32,6 +32,7 @@
         paragraph.innerHTML = `Email: ${email} - Firstname: ${firstname}`;
         document.body.appendChild(paragraph);
       }
+
       function getCookie(name) {
         let fullName = name + "=";
         let decodedCookie = decodeURIComponent(document.cookie);
