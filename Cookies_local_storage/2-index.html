@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task 2</title>
+    <title>Task 3</title>
   </head>
   <body>
     <h1>Login to the website</h1>
@@ -27,15 +27,25 @@
       function showCookies() {
         /* Method: add new paragraph and append to body with cookies */
         const paragraph = document.createElement("p");
-        paragraph.innerHTML = `Cookies: ${document.cookie}`;
+        const email = getCookie("email");
+        const firstname = getCookie("firstname")
+        paragraph.innerHTML = `Email: ${email} - Firstname: ${firstname}`;
         document.body.appendChild(paragraph);
       }
       function getCookie(name) {
-        // create variable - text to search for
         let fullName = name + "=";
-        // split the cookies with semicolons
-        let cookieSplit = fullName.split(';');
-        
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let splitCookie = decodedCookie.split(';');
+        for (let x = 0; x < splitCookie.length; x++) {
+          let value = splitCookie[x];
+          while (value.charAt(0) == ' ') {
+            value = value.substring(1);
+          }
+          if (value.indexOf(fullName) == 0) {
+            return value.substring(fullName.length, value.length);
+          }
+        }
+        return "";
       }
     </script>
   </body>
