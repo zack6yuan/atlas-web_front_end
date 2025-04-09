@@ -21,8 +21,8 @@
         /* Setting cookies for firstName and email
         Note: Multiple cookies can be set at once,
         and retrieved with one call */
-        document.cookie = `firstname=${getFirstName}`;
-        document.cookie = `email=${getEmail}`;
+        document.cookie = `firstname=${getFirstName}; path=/`;
+        document.cookie = `email=${getEmail}; path=/`;
       }
       function showCookies() {
         /* Method: add new paragraph and append to body with cookies */

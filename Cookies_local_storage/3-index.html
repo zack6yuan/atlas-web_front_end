@@ -6,22 +6,23 @@
     <title>Task 3</title>
   </head>
   <body>
-    <h1>Login to the website</h1>
-    <input type="text" placeholder="Firstname" id="firstName" />
-    <input type="text" placeholder="Email" id="email" />
-    <button onclick="showWelcomeMessageOrForm()">Log me in</button>
-    <div class="show-cookies" style="display: none">
-      <h1>Cookies</h1>
-      <button onclick="showCookies()">Show the cookies</button>
+    <div id="login-form">
+      <h1>Login to the website</h1>
+      <input type="text" placeholder="Firstname" id="firstname" />
+      <input type="text" placeholder="Email" id="email" />
+      <button onclick="setCookies()">Log me in</button>
     </div>
+    <h1>Cookies</h1>
+    <button onclick="showCookies()">Show the cookies</button>
     <script>
       function setCookies() {
         /* Method: Retrieve firstName and email + set cookies */
-        const getFirstName = document.getElementById("firstName").value;
+        const getFirstName = document.getElementById("firstname").value;
         const getEmail = document.getElementById("email").value;
-        /* Setting cookies for firstName and email
-        Note: Multiple cookies can be set at once, and retrieved with one call */
-        document.cookie = `firstName=${getFirstName}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
+        /* Setting cookies for firstName and email with expiration
+        Note: Multiple cookies can be set at once,
+        and retrieved with one call */
+        document.cookie = `firstname=${getFirstName}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
         document.cookie = `email=${getEmail}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
       }
 
@@ -29,34 +30,45 @@
         /* Method: add new paragraph and append to body with cookies */
         const paragraph = document.createElement("p");
         const email = getCookie("email");
-        const firstName = getCookie("firstName");
-        paragraph.innerHTML = `Email: ${email} - Firstname: ${firstName}`;
+        const firstname = getCookie("firstname")
+        paragraph.innerHTML = `Email: ${email} - Firstname: ${firstname}`;
         document.body.appendChild(paragraph);
       }
 
       function getCookie(name) {
         let fullName = name + "=";
-        let decodedName = decodeURIComponent(document.cookie);
-        let splitName = decodedName.split(';');
-        for (let x = 0; x < splitName.length; x++) {
-          let y = splitName[x];
-          while (y.charAt(0) == ' ') {
-            y = y.substring(1);
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let splitCookie = decodedCookie.split(';');
+        for (let x = 0; x < splitCookie.length; x++) {
+          let value = splitCookie[x];
+          while (value.charAt(0) == ' ') {
+            value = value.substring(1);
           }
-          if (y.indexOf(fullName) == 0) {
-            return y.substring(fullName.length, y.length);
+          if (value.indexOf(fullName) == 0) {
+            return value.substring(fullName.length, value.length);
           }
         }
-        return " ";
+        return ""; // If the cookie does not exist
+      }
+
+      function showForm() {
+        const form = document.getElementById('login-form');
+        form.style.display = 'block';
+      }
+
+      function hideForm() {
+        const form = document.getElementById('login-form');
+        form.style.display = 'none';
+      }
+
+      function deleteCookiesAndShowForm() {
+        document.cookie = `firstname=; expires=Sat, 19 Apr 2000 12:00:00 UTC; path=/`;
+        document.cookie = `email=; expires=Sat, 19 Apr 2000 12:00:00 UTC; path=/`;
+        showForm();
       }
 
       function showWelcomeMessageOrForm() {
-        const loginMessage = document.createElement("h1");
-        const firstName = getCookie("firstName");
-        setCookies();
-        loginMessage.innerHTML = `Welcome: ${firstName} (logout)`;
-        document.body.appendChild(loginMessage);
+
       }
     </script>
   </body>
-</html>

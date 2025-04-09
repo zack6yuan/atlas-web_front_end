@@ -20,8 +20,8 @@
         /* Setting cookies for firstName and email with expiration
         Note: Multiple cookies can be set at once,
         and retrieved with one call */
-        document.cookie = `firstname=${getFirstName}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
-        document.cookie = `email=${getEmail}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
+        document.cookie = `firstname=${getFirstName}; expires=Sat, 19 Apr 2025 12:00:00 UTC; path=/`;
+        document.cookie = `email=${getEmail}; expires=Sat, 19 Apr 2025 12:00:00 UTC; path=/`;
       }
 
       function showCookies() {
