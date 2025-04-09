@@ -9,9 +9,11 @@
     <h1>Login to the website</h1>
     <input type="text" placeholder="Firstname" id="firstName" />
     <input type="text" placeholder="Email" id="email" />
-    <button onclick="setCookies()">Log me in</button>
-    <h1>Cookies</h1>
-    <button onclick="showCookies()">Show the cookies</button>
+    <button onclick="showWelcomeMessageOrForm()">Log me in</button>
+    <div class="show-cookies" style="display: none">
+      <h1>Cookies</h1>
+      <button onclick="showCookies()">Show the cookies</button>
+    </div>
     <script>
       function setCookies() {
         /* Method: Retrieve firstName and email + set cookies */
@@ -22,6 +24,7 @@
         document.cookie = `firstName=${getFirstName}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
         document.cookie = `email=${getEmail}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
       }
+
       function showCookies() {
         /* Method: add new paragraph and append to body with cookies */
         const paragraph = document.createElement("p");
@@ -30,6 +33,7 @@
         paragraph.innerHTML = `Email: ${email} - Firstname: ${firstName}`;
         document.body.appendChild(paragraph);
       }
+
       function getCookie(name) {
         let fullName = name + "=";
         let decodedName = decodeURIComponent(document.cookie);
@@ -45,26 +49,14 @@
         }
         return " ";
       }
+
+      function showWelcomeMessageOrForm() {
+        const loginMessage = document.createElement("h1");
+        const firstName = getCookie("firstName");
+        setCookies();
+        loginMessage.innerHTML = `Welcome: ${firstName} (logout)`;
+        document.body.appendChild(loginMessage);
+      }
     </script>
-    <div class="login-form">
-      <h2>Placeholder</h2>
-      <input type="text">
-      <input type="text">
-      <button>Log out</button>
-      <script>
-        function showForm() {
-
-        }
-        function hideForm() {
-
-        }
-        function deleteCookiesAndShowForm() {
-
-        }
-        showWelcomeMessageOrForm() {
-          
-        }
-      </script>
-    </div>
   </body>
 </html>

@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task 3</title>
+    <title>Task 2</title>
   </head>
   <body>
     <h1>Login to the website</h1>
-    <input type="text" placeholder="Firstname" id="firstName" />
+    <input type="text" placeholder="Firstname" id="firstname" />
     <input type="text" placeholder="Email" id="email" />
     <button onclick="setCookies()">Log me in</button>
     <h1>Cookies</h1>
@@ -15,36 +15,27 @@
     <script>
       function setCookies() {
         /* Method: Retrieve firstName and email + set cookies */
-        const getFirstName = document.getElementById("firstName").value;
+        const getFirstName = document.getElementById("firstname").value;
         const getEmail = document.getElementById("email").value;
-        /* Setting cookies for firstName and email
-        Note: Multiple cookies can be set at once, and retrieved with one call */
-        document.cookie = `firstName=${getFirstName}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
+
+        /* Setting cookies for firstName and email with expiration
+        Note: Multiple cookies can be set at once,
+        and retrieved with one call */
+        document.cookie = `firstname=${getFirstName}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
         document.cookie = `email=${getEmail}; expires=Sat, 19 Apr 2025 12:00:00 UTC`;
       }
       function showCookies() {
         /* Method: add new paragraph and append to body with cookies */
         const paragraph = document.createElement("p");
-        const email = getCookie("email");
-        const firstName = getCookie("firstName");
-        paragraph.innerHTML = `Email: ${email} - Firstname: ${firstName}`;
+        paragraph.innerHTML = `Cookies: ${document.cookie}`;
         document.body.appendChild(paragraph);
       }
       function getCookie(name) {
+        // create variable - text to search for
         let fullName = name + "=";
-        let decodedName = decodeURIComponent(document.cookie);
-        let splitName = decodedName.split(';');
-        for (let x = 0; x < splitName.length; x++) {
-          let y = splitName[x];
-          while (y.charAt(0) == ' ') {
-            y = y.substring(1);
-          }
-          if (y.indexOf(fullName) == 0) {
-            return y.substring(fullName.length, y.length);
-          }
-        }
-        return " ";
+        // split the cookies with semicolons
+        let cookieSplit = fullName.split(';');
+        
       }
     </script>
   </body>
-</html>

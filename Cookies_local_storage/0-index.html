@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Login to the website</h1>
-    <input type="text" placeholder="Firstname" id="firstName" />
+    <input type="text" placeholder="Firstname" id="firstname" />
     <input type="text" placeholder="Email" id="email" />
     <button onclick="setCookies()">Log me in</button>
     <h1>Cookies</h1>
@@ -15,7 +15,7 @@
     <script>
       function setCookies() {
         /* Method: Retrieve firstName and email + set cookies */
-        const getFirstName = document.getElementById("firstName").value;
+        const getFirstName = document.getElementById("firstname").value;
         const getEmail = document.getElementById("email").value;
 
         /* Setting cookies for firstName and email
