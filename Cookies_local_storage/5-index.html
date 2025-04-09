@@ -7,19 +7,38 @@
 </head>
 <body>
   <script>
-    const availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+    const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
 
     function addItemToCart(item) {
-      localStorage.setItem(item, 'true');
+      localStorage.setItem(name, 'true');
     }
 
     function createStore() {
-      const uList = document.createElement('ul');
-      document.body.appendChild(uList);
-      for (let item of availableItems) {
-        const newItem = document.createElement('li');
+      const newList = document.createElement("ul");
+      document.body.appendChild(newList);
+      for (const item of availableItems) {
+        const listItem = document.createElement("li");
+        listItem.textContent = item;
+        newList.appendChild(listItem);
+        listItem.addEventListener('click', () => {
+          addItemToCart();
+        })
       }
     }
+
+    function displayCart() {
+      if (!listItem instanceof localStorage) {
+        return;
+      } else {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = `You previously had ${newList.length} items in your cart. `;
+        document.body.appendChild("paragraph");
+      }
+    }
+    
+    createStore();
+    displayCart();
+
   </script>
 </body>
 </html>
