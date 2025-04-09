@@ -15,14 +15,14 @@
     <script>
       function setCookies() {
         /* Method: Retrieve firstName and email + set cookies */
-        const firstName = document.getElementById("firstName").value;
-        const email = document.getElementById("email").value;
+        const getFirstName = document.getElementById("firstName").value;
+        const getEmail = document.getElementById("email").value;
 
         /* Setting cookies for firstName and email
         Note: Multiple cookies can be set at once,
         and retrieved with one call */
-        document.cookie = `firstname=${firstName}`;
-        document.cookie = `email=${email}`;
+        document.cookie = `firstname=${getFirstName}`;
+        document.cookie = `email=${getEmail}`;
       }
       function showCookies() {
         /* Method: add new paragraph and append to body with cookies */
