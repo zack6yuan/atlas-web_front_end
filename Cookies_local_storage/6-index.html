@@ -10,9 +10,9 @@
     const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
 
     function addItemToCart(item) {
-      localStorage.setItem(name, 'true');
+      sessionStorage.setItem(name, 'true');
     }
-// Need to change to sessionStorage
+
     function createStore() {
       const newList = document.createElement("ul");
       document.body.appendChild(newList);
@@ -21,7 +21,7 @@
         listItem.textContent = item;
         newList.appendChild(listItem);
         listItem.addEventListener('click', () => {
-          addItemToCart();
+          document.body.appendChild(listItem);
         })
       }
     }

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Task 8</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 </head>
 <body>
   <script>
@@ -17,15 +18,16 @@
     }
 
     function getCartFromStorage() {
-
+      const parsedJson = JSON.parse(availableItems);
     }
 
     function addItemToCart(item) {
-      purchasedItems.push();
+      purchasedItems.push(item);
+      updateCart();
     }
 
     function removeItemfromCart(item) {
-      
+      Cookies.remove(availableItems);
     }
 
     function clearCart() {
@@ -52,15 +54,18 @@
     function displayCart() {
       const cart = document.createElement("h2");
       cart.textContent = "Your cart:";
+      const cartList = document.createElement("ul");
       const block = document.createElement("div");
+      block.appendChild(cartList);
       // If the div tag already exists, remove any list child (TODO)
       document.body.appendChild(cart);
+      document.body.appendChild(block);
       updateCart();
     }
 
     function updateCart() {
-      const newList = document.createElement("ul");
-
+      const newList = document.createElement("li");
+      addedItems.appendChild(newList);
     }
   </script>
 </body>
