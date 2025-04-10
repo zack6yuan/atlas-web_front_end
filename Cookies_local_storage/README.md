@@ -1,6 +1,7 @@
 # Cookies / Local Storage
 ## How to create cookies using JavaScript?
 * document.cookie = "name=value; expires=date; path=path";
+* Essentialy, Cookies are name-value pairs that are stored to remember your information.
 ## How to set specific settings for the cookie?
 * You set specific settings for cookies in JavaScript by including optional attributes within the document.cookie string when you create or modify a cookie.
 ## How to read cookies with Javascript?
