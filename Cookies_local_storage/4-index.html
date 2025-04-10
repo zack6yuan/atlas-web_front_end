@@ -36,22 +36,9 @@
         document.body.appendChild(paragraph);
       }
 
-      function setCookies() {
-        const getFirstName = document.getElementById('firstname');
-        const getEmail = document.getElementById('email');
-        Cookies.get('firstname', getFirstName);
-        Cookies.get('email', getEmail);
-      }
-
-      function deleteCookiesAndShowForm() {
-        Cookies.remove('firstname');
-        Cookies.remove('email');
-      }
-
-      function setCookiesAndShowWelcomeMessage() {
-        Cookies.set('firstname', getFirstName);
-        Cookies.set('email', getEmail);
-        showWelcomeMessageOrForm();
+      function getCookie(name) {
+        const value = Cookies.get(name);
+        return (value);
       }
 
       function showForm() {
@@ -65,11 +52,25 @@
         document.getElementById('login-form').style.display = 'none';
        }
 
+       function deleteCookiesAndShowForm() {
+        document.cookie = `firstname=${getFirstName}; expires=Tue, 8 Apr 2025 12:00:00 UTC; path=/`;
+        document.cookie = `email=${getEmail}; expires=Tue, 8 Apr 2025 12:00:00 UTC; path=/`;
+        showForm();
+        Cookies.remove('firstname');
+        Cookies.remove('email');
+       }
+
       function showWelcomeMessageOrForm() {
         const welcomeMessage = document.createElement("h1");
         const firstname = getCookie('firstname')
-        welcomeMessage.innerHTML = `Welcome ${firstname} <a href="3-index.html" style="font-weight: normal; font-style: italic; margin-left: 10px; text-decoration: none; color: black;">logout</a>`;
+        welcomeMessage.innerHTML = `Welcome: ${firstname} <a href="3-index.html" style="font-weight: normal; font-style: italic; margin-left: 10px; text-decoration: none; color: black;">(logout)</a>`;
         document.body.append(welcomeMessage);
+      }
+
+      function setCookiesAndShowWelcomeMessage() {
+        Cookies.set(`firstname=${getFirstName}`);
+        Cookies.set(`email=${getEmail}`);
+        showWelcomeMessageOrForm();
       }
     </script>
   </body>

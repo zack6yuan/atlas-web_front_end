@@ -62,10 +62,16 @@
         document.getElementById('login-form').style.display = 'none';
        }
 
+       function deleteCookiesAndShowForm() {
+        document.cookie = `firstname=${getFirstName}; expires=Tue, 8 Apr 2025 12:00:00 UTC; path=/`;
+        document.cookie = `email=${getEmail}; expires=Tue, 8 Apr 2025 12:00:00 UTC; path=/`;
+        showForm();
+       }
+
       function showWelcomeMessageOrForm() {
         const welcomeMessage = document.createElement("h1");
         const firstname = getCookie('firstname')
-        welcomeMessage.innerHTML = `Welcome ${firstname} <a href="3-index.html" style="font-weight: normal; font-style: italic; margin-left: 10px; text-decoration: none; color: black;">logout</a>`;
+        welcomeMessage.innerHTML = `Welcome: ${firstname} <a href="3-index.html" style="font-weight: normal; font-style: italic; margin-left: 10px; text-decoration: none; color: black;">(logout)</a>`;
         document.body.append(welcomeMessage);
       }
     </script>
