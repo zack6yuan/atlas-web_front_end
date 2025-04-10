@@ -1,6 +1,6 @@
 function createElement(data) {
   const paragraph = document.createElement('p');
-  paragraph.textContent = 'data';
+  paragraph.textContent = data;
   document.body.appendChild(paragraph);
 }
 

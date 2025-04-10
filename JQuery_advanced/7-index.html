@@ -27,20 +27,18 @@
             $("<table>").append(
               $("<tr>").append(
                 $("<td>").append(
-                  $("<li>").append(
-                    $("<span>").text(/*id*/ "Example ID -"),
-                  )
+                  $("<li>").append($("<span>").text(/*id*/ "Example ID -"))
                 ),
-                $("<td>").append(
-                  $("<b>").text(/* title */ "Example Result")
-                )
+                $("<td>").append($("<b>").text(/* title */ "Example Result"))
               ),
               $("<tr>").append(
                 fetch(`https://www.mediawiki.org/wiki/API:Search`)
-                .then(function(response) {return response.json();})
-                .then(function(response) {
-                  response
-                })
+                  .then(function (response) {
+                    return response.json();
+                  })
+                  .then(function (response) {
+                    response;
+                  })
               )
             )
           );
