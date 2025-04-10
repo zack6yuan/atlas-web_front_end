@@ -7,10 +7,13 @@
   </head>
   <body>
     <h1>Login to the website</h1>
+    <!-- Add two text inputs -->
     <input type="text" placeholder="Firstname" id="firstname" />
     <input type="text" placeholder="Email" id="email" />
+    <!-- Login button that calls setCookies() -->
     <button onclick="setCookies()">Log me in</button>
     <h1>Cookies</h1>
+    <!-- Button that shows the cookies onClick -->
     <button onclick="showCookies()">Show the cookies</button>
     <script>
       function setCookies() {
@@ -27,7 +30,9 @@
       function showCookies() {
         /* Method: add new paragraph and append to body with cookies */
         const paragraph = document.createElement("p");
+        /* Set the innerHTML of the paragraph */
         paragraph.innerHTML = `Cookies: ${document.cookie}`;
+        /* Append paragraph to the body */
         document.body.appendChild(paragraph);
       }
     </script>
