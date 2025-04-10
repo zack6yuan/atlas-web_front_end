@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task 4</title>
+    <title>Task 5</title>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
   </head>
   <body>
@@ -63,7 +63,7 @@
       function showWelcomeMessageOrForm() {
         const welcomeMessage = document.createElement("h1");
         const firstname = getCookie('firstname')
-        welcomeMessage.innerHTML = `Welcome: ${firstname} <a href="3-index.html" style="font-weight: normal; font-style: italic; margin-left: 10px; text-decoration: none; color: black;">(logout)</a>`;
+        welcomeMessage.innerHTML = `Welcome: ${firstname} <a href="4-index.html" style="font-weight: normal; font-style: italic; margin-left: 10px; text-decoration: none; color: black;">(logout)</a>`;
         document.body.append(welcomeMessage);
       }
 
