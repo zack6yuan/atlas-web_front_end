@@ -44,8 +44,11 @@
       for (const item of availableItems) {
         const listItem = document.createElement("li");
         listItem.textContent = item;
+        const removeItem = document.createElement("p");
+        removeItem.textContent = "(remove)"
         listItem.addEventListener("click", function() {
           document.body.appendChild(listItem);
+          listItem.append(removeItem);
         })
         newList.appendChild(listItem);
       }
